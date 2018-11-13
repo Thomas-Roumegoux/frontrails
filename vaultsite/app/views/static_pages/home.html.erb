@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Components Css</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header>
+    <nav class="navbar">
+    <a href="#" class="navbar-logo"><h2><%= image_tag("logo.jpg", class: "logo") %></h2></a>
+      <ul class="navbar-right">
+        <li><a href="#">Profil</a></li>
+        <li><a href="#">Infos</a></li>
+        <li><a href="#">Contact</a></li>
+      
+        <li><a href="#"><strong>VaultBoy</strong></a></li>
+
+        <label class="dropdown">
+
+          <div class="dd-button">
+            <a href="#"><%= image_tag("vaultboy.jpg", class: "avatar-sm") %></a>
+          </div>
+
+          <input type="checkbox" class="dd-input" id="test">
+
+          <ul class="dd-menu">
+            <li>Settings</li>
+            <li>Log out</li>
+          </ul>
+          
+        </label>
+
+      </ul>
+
+    </nav>
+  </header>
+  <main>
+	<section> <!-- CTA -->
+	<div class="welcome background-color-filter">
+		<h1>Welcome, VaultBoy !</h1>
+		<a href="#">
+			<div class="btn-blue">
+				Sign out
+			</div>
+		</a>	
+	</div>
+	
+	</section>
+
+	<section> <!-- CARD -->
+		<div class="card">
+			<%= image_tag("vaultboy.jpg", class: "avatar-lg") %>
+			<div class="card-title"><h2>Title</h2></div>
+			<div class="card-category"><h4>Category</h4></div>
+			<div class="card-content"><p>Cartman : M'man, le chat c'est un vrai godemiché !
+			<br/>Ms. Cartman : Dans ce cas je connais un gentil petit chaton qui va dormir avec maman ce soir.</p></div>
+			<a href="#"><div class="card-btn">More info</div></a>
+
+		</div>
+	</section>
+	
+	<section> <!-- TABS -->
+	<div class="tabs">
+		<div class="tab">
+			<input name="checkbox-tabs-group" type="radio" id="checkbox1" class="checkboxtab" checked>
+			<label for="checkbox1">Tab 1</label>
+			<div class="content">
+				Je ne constate absolument rien d'anormal. Les auto-mutilations de vache, c'est une chose très fréquente.
+			</div>
+		</div>
+		
+		<div class="tab">
+			<input name="checkbox-tabs-group" type="radio" id="checkbox2" class="checkboxtab">
+			<label for="checkbox2">Tab 2</label>
+			<div class="content">
+				Stan : Les dauphins sont intelligents et ils sont gentils.
+				<br/>Cartman : Intelligents et gentils dans un sandwich avec de la mayonnaise.
+			</div>
+		</div>
+		
+		<div class="tab">
+			<input name="checkbox-tabs-group" type="radio" id="checkbox3" class="checkboxtab">
+			<label for="checkbox3">Tab 3</label>
+			<div class="content">
+				Chasser sans bière c'est comme... pêcher sans bière.
+			</div>
+		</div>
+	</div>
+		
+	</section>
+
+</main>
+  <%= yield %>
+  <footer>
+  </footer>
+  </body>
+</html>

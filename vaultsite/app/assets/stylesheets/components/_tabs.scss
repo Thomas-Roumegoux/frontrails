@@ -1,0 +1,48 @@
+.tabs
+{
+	position: relative;
+	clear: both;
+}
+
+.tabs .tab
+{
+	float: left;
+}
+
+.tabs .tab .content
+{
+	position: absolute;
+	background-color: white;
+	left: 0px;
+	width: 90%;
+	margin-top: 20px;
+	text-align: left;
+	margin-bottom: 100px;
+}
+
+.checkboxtab
+{
+	display: none;
+}
+
+.tab label
+{
+	margin-right: 10px;
+	transition: 0.2s;
+}
+
+.tab label:hover
+{
+	color: #546de5;
+}
+
+.checkboxtab:checked ~ label
+{
+	color: #546de5;
+	
+}
+
+.checkboxtab:checked ~ .content
+{
+	z-index: 1;
+}
